@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: Banking App
+  datasource:
+    url: jdbc:h2:mem:banking;DB_CLOSE_DELAY=-1
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+    show-sql: true
+
+  h2:
+    console:
+      enabled: true
+      settings:
+        trace: true
+logging:
+  level:
+    root: INFO
+server:
+  port: 8080
